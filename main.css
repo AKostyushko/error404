@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+    height: 150vh;
+    background-color: #1D1D1D;
+    background: linear-gradient(135deg, #2D2D2D 0%, #1A1A1A 100%);
+
+}
+.run-line {
+    display: block;
+    height: 5%;
+    width: 100%;
+    background-color: white;
+}
+.header {
+    max-width: 1055px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 4rem;
+    padding-bottom: .5rem;
+    z-index: 10;
+}
+@media (max-width: 640px) {
+    .header {
+        display: none; }
+}
+
+.section {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    width: 40%;
+    height: 100%;
+    color: white;
+    font-family: MontserratMedium;
+    background: url("img/caduceus-silver-big.png") no-repeat;
+    background-size: contain;
+}
+.section__error {
+    margin: 10%;
+    font-size: 24px;
+    letter-spacing: 10.5px;
+    line-height: 29px;
+    font-family: "MontserratLight", sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+@media (max-width: 1000px) {
+    .section__error {
+        font-size: 20px;
+    }
+}
+.section__404 {
+    font-family: MontserratBlack;
+    font-size: 128px;
+    letter-spacing: 20px;
+    padding-left: 4%;
+    margin: 10%;
+    text-align: center;
+}
+@media (max-width: 1000px) {
+    .section__404 {
+        font-size: 100px;
+    }
+}
+.section__text {
+    display: block;
+    font-family: MontserratBold;
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 12%;
+    margin-bottom: 3.5%;
+}
+@media (max-width: 1000px) {
+    .section__text {
+        font-size: 20px;
+    }
+}
+.section__text-small {
+    font-family: MontserratMedium;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 10%;
+}
+@media (max-width: 1000px) {
+    .section__text-small {
+        font-size: 14px;
+    }
+}
+.section__btn {
+    height: 60px;
+    width: 120px;
+    background: radial-gradient(circle, #CC1113 0%, #A30201 100%);
+    box-shadow: 0 32px 44px 0 rgba(0,0,0,0.14);
+    border: none;
+    outline: none;
+    font-family: MontserratBold;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+@media (max-width: 1000px) {
+    .section__btn {
+        height: 50px;
+        width: 100px;
+        font-size: 14px;
+    }
+}
+.section__btn:hover {
+    background: #A30201;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.nav {
+    display: flex;
+    font-weight: bold;
+    color: white;
+}
+@media (max-width: 640px) {
+    .nav {
+        display: none; }
+}
+
+.nav__link {
+    transition: color .3s;
+    cursor: pointer;
+    font-family: "MontserratSemiBold", sans-serif;
+}
+.nav__link:not(:last-child) {
+    margin-right: 2em;
+}
+.nav__link_active, .nav__link:hover {
+    color: #e40000;
+}
+
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.dropdown__btn {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+}
+.dropdown__btn:focus {
+    outline: none;
+}
+.dropdown__btn-descr {
+    margin-right: 1em;
+    color: #999999;
+}
+.dropdown__btn-currentLang {
+    color: #FFFFFF;
+}
+.dropdown__btn-icon {
+    margin-left: .5em;
+    flex-shrink: 0;
+    fill: currentColor;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+}
+.dropdown_open .dropdown__btn-icon {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.dropdown__list {
+    padding: 1em;
+    display: none;
+    position: absolute;
+    text-align: right;
+    right: 0;
+    top: calc(100% + .3em);
+    box-shadow: 0 0.4rem 1.6rem 0 rgba(0, 0, 0, 0.08);
+    background-color: #f7f7f7;
+}
+.dropdown__list-item:not(:last-of-type) {
+    margin-bottom: .5em;
+}
+.dropdown__link_active {
+    font-weight: bold;
+}
+
+
+/*----------------*/
+@font-face {
+    font-family: "MontserratBlack";
+    src: url("fonts/Montserrat/montserrat-black-webfont.woff");
+    src: url("fonts/Montserrat/montserrat-black-webfont.woff") format("woff"), url("fonts/Montserrat/montserrat-black-webfont.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "MontserratMedium";
+    src: url("fonts/Montserrat/montserrat-medium-webfont.woff");
+    src: url("fonts/Montserrat/montserrat-medium-webfont.woff") format("woff"), url("fonts/Montserrat/montserrat-medium-webfont.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "MontserratLight";
+    src: url("fonts/Montserrat/montserrat-light-webfont.woff");
+    src: url("fonts/Montserrat/montserrat-light-webfont.woff") format("woff"), url("fonts/Montserrat/montserrat-light-webfont.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "MontserratBold";
+    src: url("fonts/Montserrat/montserrat-bold-webfont.woff");
+    src: url("fonts/Montserrat/montserrat-bold-webfont.woff") format("woff"), url("fonts/Montserrat/montserrat-bold-webfont.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
